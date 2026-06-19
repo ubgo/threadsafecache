@@ -1,5 +1,8 @@
 # threadsafecache
 
+> [!WARNING]
+> **Deprecated — archived in favor of [`github.com/ubgo/cache-obj`](https://github.com/ubgo/cache-obj).** `cache-obj` is the family-branded successor: the same zero-serialization, live-object-by-reference caching, plus a stable `Cache[T]` contract, per-entry TTL (`SetTTL`), `Stats`, an `OnEvict` hook, an unbounded mode, and a conformance suite (`objtest.Run`). It is the in-process companion to [`github.com/ubgo/cache`](https://github.com/ubgo/cache) — reach for `cache-obj` only when you must hold a live object (a `*regexp.Regexp`, `*http.Client`, open connection, or any value with unexported state that won't survive a codec round-trip); for serializable values use `ubgo/cache` + `cache-mem`. No new development happens here; migrate to `cache-obj`.
+
 > Generic LRU cache + per-entry TTL. Thread-safe. One dependency
 > (`hashicorp/golang-lru/v2`), one type, six methods.
 
